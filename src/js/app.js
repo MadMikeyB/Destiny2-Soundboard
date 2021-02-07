@@ -1,4 +1,5 @@
 window._ = require('lodash')
+import tippy from 'tippy.js'
 
 // Axios
 window.axios = require('axios')
@@ -28,3 +29,5 @@ app.$on('scrollToTop', function() {
         behavior: 'smooth' 
     });
 })
+
+tippy('.button')
