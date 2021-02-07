@@ -2,8 +2,9 @@
     <div>
         <nav-menu></nav-menu>
         <h1>{{name}}</h1>
+        <input type="text" v-model="search">
         <div class="grid" v-if="transcripts.length > 0">
-            <a class="button" v-for="transcript in transcripts" :title="transcript.Text" :data-hex="transcript.EntryHash" :data-tippy-content="transcript.Text" @click="createAndPlayAudioElement(transcript)">
+            <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash" :data-tippy-content="transcript.Text" @click="createAndPlayAudioElement(transcript)">
                 {{shorten(transcript.Text, 25)}}
             </a>
         </div>
@@ -18,6 +19,13 @@
     export default {
         props: [],
         components: { NavMenu },
+        computed: {
+            filteredTranscripts() {
+                return this.transcripts.filter(transcript => {
+                    return transcript.Text.toLowerCase().includes(this.search.toLowerCase())
+                })
+            }
+        },
         mounted() {},
         created() {
             this.fetchTranscripts(this.name)
@@ -27,6 +35,7 @@
             return {
                 name: 'Shaxx',
                 dirname: 'shaxx',
+                search: '',
                 transcripts: []
             }
         },

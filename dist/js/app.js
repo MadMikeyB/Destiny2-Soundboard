@@ -5081,11 +5081,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5096,12 +5106,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Calus',
       dirname: 'calus',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5116,8 +5127,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5169,11 +5180,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5184,12 +5205,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Cayde-6',
       dirname: 'cayde',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5204,8 +5226,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5257,11 +5279,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5272,12 +5304,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Crypt AI',
       dirname: 'crypt-ai',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5292,8 +5325,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5345,11 +5378,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5360,12 +5403,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Drifter',
       dirname: 'drifter',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5380,8 +5424,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5433,11 +5477,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5448,12 +5502,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Eris',
       dirname: 'eris',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5468,8 +5523,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5521,11 +5576,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5536,12 +5601,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Failsafe',
       dirname: 'failsafe',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5556,8 +5622,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5609,11 +5675,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5624,12 +5700,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Ghaul',
       dirname: 'ghaul',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5644,8 +5721,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5697,11 +5774,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5712,12 +5799,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Ikora',
       dirname: 'ikora',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5732,8 +5820,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5785,11 +5873,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5800,12 +5898,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Saint-14',
       dirname: 'saint',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5820,8 +5919,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5873,11 +5972,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5888,12 +5997,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Saladin',
       dirname: 'saladin',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5908,8 +6018,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -5961,11 +6071,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -5976,12 +6096,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Shaxx',
       dirname: 'shaxx',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -5996,8 +6117,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -6049,11 +6170,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -6064,12 +6195,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'The Crow',
       dirname: 'crow',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -6084,8 +6216,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -6137,11 +6269,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {
     NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
   },
   mounted: function mounted() {},
   created: function created() {
@@ -6152,12 +6294,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {
       name: 'Zavala',
       dirname: 'zavala',
+      search: '',
       transcripts: []
     };
   },
   methods: {
     fetchTranscripts: function fetchTranscripts(name) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
@@ -6172,8 +6315,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           if (item.Narrator == name) {
             arr.push(item);
           }
-        }, _this);
-        _this.transcripts = arr;
+        }, _this2);
+        _this2.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -27640,11 +27783,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -27709,11 +27873,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -27778,11 +27963,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -27847,11 +28053,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -27916,11 +28143,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -27985,11 +28233,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -28054,11 +28323,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -28123,11 +28413,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -28192,11 +28503,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -28261,11 +28593,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -28330,11 +28683,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -28399,11 +28773,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
@@ -28468,11 +28863,32 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text" },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
       _vm.transcripts.length > 0
         ? _c(
             "div",
             { staticClass: "grid" },
-            _vm._l(_vm.transcripts, function(transcript) {
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
                 {
