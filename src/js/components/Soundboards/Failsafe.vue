@@ -4,7 +4,7 @@
         <h1>{{name}}</h1>
         <input type="text" v-model="search">
         <div class="grid" v-if="transcripts.length > 0">
-            <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash" :content="dynamicTitle" v-tippy @click="createAndPlayAudioElement(transcript)">
+            <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash" v-tippy @click="createAndPlayAudioElement(transcript)">
                 {{shorten(transcript.Text, 25)}}
             </a>
         </div>
@@ -68,8 +68,7 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background: rgb(18, 23, 28);
-    padding: 25px;
+    
 
     /* Gold buttons */
     .button {

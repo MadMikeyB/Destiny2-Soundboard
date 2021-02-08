@@ -33,6 +33,53 @@
     };
 </script>
 
-<style>
-    
+<style lang="scss" scoped>
+    ul {
+        list-style: none;
+        margin: 10px 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            color: #f5f5f5;
+            background: rgba(#666666, 0.8);
+            font-weight: 500;
+            margin: 5px;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            text-transform: uppercase;
+
+            &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border: 1px solid #999999;
+                transition: 0.25s ease;
+            }
+
+            &:hover {
+                background: #666666;
+                &:after {
+                    top: -5px;
+                    left: -5px;
+                    right: -5px;
+                    bottom: -5px;
+                    border-color: #f5f5f5;
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+    }
 </style>
