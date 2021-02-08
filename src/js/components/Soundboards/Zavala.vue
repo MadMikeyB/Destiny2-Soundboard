@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav-menu></nav-menu>
-        <h1>{{name}}</h1>
+        <h1>{{name}} (WIP)</h1>
         <input type="text" placeholder="Type to search..." v-model="search">
         <div class="grid" v-if="transcripts.length > 0">
             <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash"  v-tippy @click="createAndPlayAudioElement(transcript)">

@@ -22617,7 +22617,7 @@ var render = function() {
     [
       _c("nav-menu"),
       _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.name))]),
+      _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -23517,7 +23517,7 @@ var render = function() {
     [
       _c("nav-menu"),
       _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.name))]),
+      _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -23607,7 +23607,7 @@ var render = function() {
     [
       _c("nav-menu"),
       _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.name))]),
+      _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -23697,7 +23697,7 @@ var render = function() {
     [
       _c("nav-menu"),
       _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.name))]),
+      _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -23787,7 +23787,7 @@ var render = function() {
     [
       _c("nav-menu"),
       _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.name))]),
+      _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
       _vm._v(" "),
       _c("input", {
         directives: [
