@@ -7,6 +7,7 @@ import Calus from './components/Soundboards/Calus'
 import Cayde from './components/Soundboards/Cayde'
 import CryptAI from './components/Soundboards/CryptAI'
 import Drifter from './components/Soundboards/Drifter'
+import Eramis from './components/Soundboards/Eramis'
 import Eris from './components/Soundboards/Eris'
 import Failsafe from './components/Soundboards/Failsafe'
 import Ghaul from './components/Soundboards/Ghaul'
@@ -54,6 +55,11 @@ const router = new VueRouter({
             path: '/soundboards/drifter',
             name: 'drifter',
             component: Drifter
+        },
+        {
+            path: '/soundboards/eramis',
+            name: 'eramis',
+            component: Eramis
         },
         {
             path: '/soundboards/eris',

@@ -5,6 +5,7 @@
             <li><router-link to="/soundboards/cayde">Cayde-6</router-link></li>
             <li><router-link to="/soundboards/crypt-ai">Crypt AI</router-link></li>
             <li><router-link to="/soundboards/drifter">Drifter</router-link></li>
+            <li><router-link to="/soundboards/eramis">Eramis</router-link></li>
             <li><router-link to="/soundboards/eris">Eris</router-link></li>
             <li><router-link to="/soundboards/failsafe">Failsafe</router-link></li>
             <li><router-link to="/soundboards/ghaul">Ghaul</router-link></li>

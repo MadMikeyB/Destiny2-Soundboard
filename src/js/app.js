@@ -1,5 +1,5 @@
 window._ = require('lodash')
-import tippy from 'tippy.js'
+import VueTippy, { TippyComponent } from "vue-tippy";
 
 // Axios
 window.axios = require('axios')
@@ -16,6 +16,20 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
+
+Vue.use(VueTippy, {
+  directive: "tippy", // => v-tippy
+  flipDuration: 0,
+  popperOptions: {
+    modifiers: {
+      preventOverflow: {
+        enabled: false
+      }
+    }
+  }
+});
+Vue.component("tippy", TippyComponent);
+
 Vue.config.productionTip = false
 import router from './routes'
 
@@ -29,5 +43,3 @@ app.$on('scrollToTop', function() {
         behavior: 'smooth' 
     });
 })
-
-tippy('.button')

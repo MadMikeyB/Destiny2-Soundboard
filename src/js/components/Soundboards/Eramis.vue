@@ -33,8 +33,8 @@
         watch: {},
         data() {
             return {
-                name: 'Drifter',
-                dirname: 'drifter',
+                name: 'Eramis',
+                dirname: 'eramis',
                 search: '',
                 transcripts: []
             }
@@ -50,6 +50,7 @@
                             arr.push(item)
                         }
                     }, this)
+                    arr.sort((a, b) => a.name - b.name );
                     this.transcripts = arr
                 })
             },

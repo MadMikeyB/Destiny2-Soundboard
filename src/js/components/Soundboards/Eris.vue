@@ -4,7 +4,7 @@
         <h1>{{name}}</h1>
         <input type="text" v-model="search">
         <div class="grid" v-if="transcripts.length > 0">
-            <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash" :data-tippy-content="transcript.Text" @click="createAndPlayAudioElement(transcript)">
+            <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash" :content="dynamicTitle" v-tippy @click="createAndPlayAudioElement(transcript)">
                 {{shorten(transcript.Text, 25)}}
             </a>
         </div>
@@ -66,27 +66,47 @@
 
 <style lang="scss" scoped>
 .grid {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgb(18, 23, 28);
+    padding: 25px;
+
+    /* Teal buttons */
     .button {
-        align-items: center;
-        background-color: #000;
-        border: 1px solid white;
-        color: #fff;
-        cursor: pointer;
+        color: #f5f5f5;
+        background: rgba(#008081, 0.8);
+        font-weight: 500;
+        margin: 5px;
+        box-sizing: border-box;
+        position: relative;
         display: flex;
-        font-family: sans-serif;
-        height: 45px;
+        align-items: center;
         justify-content: center;
-        letter-spacing: .5px;
-        margin: 10px;
-        padding: 10px;
-        text-align: center;
-        text-decoration: none;
+        padding: 15px;
         text-transform: uppercase;
-        width: 16.66%;
+
+        &:after {
+            position: absolute;
+            content: "";
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #4cbfbf;
+            transition: 0.25s ease;
+        }
+
+        &:hover {
+            background: #008081;
+            &:after {
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                border-color: #f5f5f5;
+            }
+        }
     }
 }    
 </style>
