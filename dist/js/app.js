@@ -3407,7 +3407,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "ul[data-v-37d5c869] {\n  list-style: none;\n  margin: 10px 0;\n  padding: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nul li[data-v-37d5c869] {\n  color: #f5f5f5;\n  background: rgba(102, 102, 102, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\nul li[data-v-37d5c869]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #999999;\n  transition: 0.25s ease;\n}\nul li[data-v-37d5c869]:hover {\n  background: #666666;\n}\nul li[data-v-37d5c869]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}\nul li a[data-v-37d5c869] {\n  text-decoration: none;\n}", ""]);
+exports.push([module.i, "ul[data-v-37d5c869] {\n  list-style: none;\n  margin: 10px 0;\n  padding: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nul a[data-v-37d5c869] {\n  color: #f5f5f5;\n  background: rgba(102, 102, 102, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n  text-decoration: none;\n}\nul a[data-v-37d5c869]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #999999;\n  transition: 0.25s ease;\n}\nul a[data-v-37d5c869]:hover {\n  background: #666666;\n}\nul a[data-v-37d5c869]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -22628,7 +22628,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -22718,7 +22718,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -22808,7 +22808,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -22898,7 +22898,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -22988,7 +22988,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -23078,7 +23078,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -23168,7 +23168,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -23258,7 +23258,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -23348,7 +23348,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -23438,7 +23438,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -23528,7 +23528,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -23618,7 +23618,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -23708,7 +23708,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {
@@ -23798,7 +23798,7 @@ var render = function() {
             expression: "search"
           }
         ],
-        attrs: { type: "text" },
+        attrs: { type: "text", placeholder: "Type to search..." },
         domProps: { value: _vm.search },
         on: {
           input: function($event) {

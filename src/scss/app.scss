@@ -1,4 +1,29 @@
 @import "config";
 @import "components/*";
 
+/** I'm terrible */
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    background: rgb(18, 23, 28);
+    padding: 25px;
+    margin: 0;
+    color: white;
+    a {
+        color: white;
+    }
+    input {
+        margin-left: 5px;
+        width: calc(100% - 32px);
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 24px;
+        background-color: #444;
+        outline: none;
+        border: 0;
+        border: 1px solid white;
+        color: white;
+    }
+}
+
+
 @import "../../node_modules/tippy.js/dist/tippy.css";

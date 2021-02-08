@@ -42,7 +42,7 @@
         align-items: center;
         justify-content: center;
 
-        li {
+        a {
             color: #f5f5f5;
             background: rgba(#666666, 0.8);
             font-weight: 500;
@@ -54,6 +54,7 @@
             justify-content: center;
             padding: 15px;
             text-transform: uppercase;
+            text-decoration: none;
 
             &:after {
                 position: absolute;
@@ -76,9 +77,6 @@
                     bottom: -5px;
                     border-color: #f5f5f5;
                 }
-            }
-            a {
-                text-decoration: none;
             }
         }
     }
