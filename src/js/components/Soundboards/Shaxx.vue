@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav-menu></nav-menu>
-        <h1>{{name}} (WIP)</h1>
+        <h1>{{name}}</h1>
         <input type="text" placeholder="Type to search..." v-model="search">
         <div class="grid" v-if="transcripts.length > 0">
             <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash"  v-tippy @click="createAndPlayAudioElement(transcript)">
@@ -28,7 +28,7 @@
         },
         mounted() {},
         created() {
-            this.fetchTranscripts(this.name)
+            this.fetchTranscripts(this.name)        
         },
         watch: {},
         data() {
@@ -36,15 +36,16 @@
                 name: 'Shaxx',
                 dirname: 'shaxx',
                 search: '',
-                transcripts: []
+                transcripts: [],
             }
         },
         methods: {
             fetchTranscripts(name){
-                axios.get('/dist/media/transcripts.json').then(({data}) => {
+                axios.get(`/dist/media/${this.dirname}/transcripts.json`).then(({data}) => {
                     // Get all Transcripts, then flatten to single array.
                     const response = [].concat(...data)
                     const arr = []
+
                     response.forEach((item) => {
                         if (item.Narrator == name) {
                             arr.push(item)

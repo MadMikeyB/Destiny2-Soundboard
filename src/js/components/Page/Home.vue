@@ -1,8 +1,7 @@
 <template>
     <div>
-        <nav-menu></nav-menu>
         <h1>Destiny 2 Soundboard</h1>
-        <p>Click an image below, or a link above to get started.</p>
+        <p>Click an image below to get started.</p>
         <p><a href="">Disclaimers &amp; Credits</a></p>
         <div class="grid">
             <router-link to="/soundboards/calus"><div title="Calus" v-tippy><img src="dist/img/Calus.png" alt="Calus"></div></router-link>

@@ -1975,7 +1975,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
@@ -2075,6 +2074,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   },
   mounted: function mounted() {},
   created: function created() {
+    this.fetchLegacyDict();
     this.fetchTranscripts(this.name);
   },
   watch: {},
@@ -2083,28 +2083,38 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       name: 'Calus',
       dirname: 'calus',
       search: '',
-      transcripts: []
+      transcripts: [],
+      dict: []
     };
   },
   methods: {
-    fetchTranscripts: function fetchTranscripts(name) {
+    fetchLegacyDict: function fetchLegacyDict() {
       var _this2 = this;
 
-      axios.get('/dist/media/transcripts.json').then(function (_ref) {
-        var _ref2;
-
+      axios.get('/dist/media/legacy_dict.json').then(function (_ref) {
         var data = _ref.data;
+        _this2.dict = data;
+      });
+    },
+    fetchTranscripts: function fetchTranscripts(name) {
+      var _this3 = this;
+
+      axios.get("/dist/media/".concat(this.dirname, "/transcripts.json")).then(function (_ref2) {
+        var _ref3;
+
+        var data = _ref2.data;
 
         // Get all Transcripts, then flatten to single array.
-        var response = (_ref2 = []).concat.apply(_ref2, _toConsumableArray(data));
+        var response = (_ref3 = []).concat.apply(_ref3, _toConsumableArray(data));
 
         var arr = [];
         response.forEach(function (item) {
           if (item.Narrator == name) {
+            item.Text = _this3.dict[item.EntryHash];
             arr.push(item);
           }
-        }, _this2);
-        _this2.transcripts = arr;
+        }, _this3);
+        _this3.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -3069,6 +3079,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   },
   mounted: function mounted() {},
   created: function created() {
+    this.fetchLegacyDict();
     this.fetchTranscripts(this.name);
   },
   watch: {},
@@ -3077,28 +3088,38 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       name: 'Saladin',
       dirname: 'saladin',
       search: '',
-      transcripts: []
+      transcripts: [],
+      dict: []
     };
   },
   methods: {
-    fetchTranscripts: function fetchTranscripts(name) {
+    fetchLegacyDict: function fetchLegacyDict() {
       var _this2 = this;
 
-      axios.get('/dist/media/transcripts.json').then(function (_ref) {
-        var _ref2;
-
+      axios.get('/dist/media/legacy_dict.json').then(function (_ref) {
         var data = _ref.data;
+        _this2.dict = data;
+      });
+    },
+    fetchTranscripts: function fetchTranscripts(name) {
+      var _this3 = this;
+
+      axios.get("/dist/media/".concat(this.dirname, "/transcripts.json")).then(function (_ref2) {
+        var _ref3;
+
+        var data = _ref2.data;
 
         // Get all Transcripts, then flatten to single array.
-        var response = (_ref2 = []).concat.apply(_ref2, _toConsumableArray(data));
+        var response = (_ref3 = []).concat.apply(_ref3, _toConsumableArray(data));
 
         var arr = [];
         response.forEach(function (item) {
           if (item.Narrator == name) {
+            item.Text = _this3.dict[item.EntryHash];
             arr.push(item);
           }
-        }, _this2);
-        _this2.transcripts = arr;
+        }, _this3);
+        _this3.transcripts = arr;
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
@@ -3183,7 +3204,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('/dist/media/transcripts.json').then(function (_ref) {
+      axios.get("/dist/media/".concat(this.dirname, "/transcripts.json")).then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -22604,204 +22625,176 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("nav-menu"),
-      _vm._v(" "),
-      _c("h1", [_vm._v("Destiny 2 Soundboard")]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v("Click an image below, or a link above to get started.")
-      ]),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "grid" },
-        [
-          _c("router-link", { attrs: { to: "/soundboards/calus" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Calus" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Calus.png", alt: "Calus" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/cayde" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Cayde" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Cayde.gif", alt: "Cayde" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/crypt-ai" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "CryptAI" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/CryptAI.jpg", alt: "CryptAI" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/drifter" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Drifter" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Drifter.jpg", alt: "Drifter" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/eramis" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Eramis" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Eramis.png", alt: "Eramis" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/eris" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Eris" }
-              },
-              [_c("img", { attrs: { src: "dist/img/Eris.png", alt: "Eris" } })]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/failsafe" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Failsafe" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Failsafe.jpg", alt: "Failsafe" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/ghaul" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Ghaul" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Ghaul.jpg", alt: "Ghaul" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/ikora" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Ikora" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Ikora.jpg", alt: "Ikora" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/saint-14" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Saint14" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Saint14.jpg", alt: "Saint14" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/saladin" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Saladin" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Saladin.jpg", alt: "Saladin" }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/soundboards/shaxx" } }, [
-            _c(
-              "div",
-              {
-                directives: [{ name: "tippy", rawName: "v-tippy" }],
-                attrs: { title: "Shaxx" }
-              },
-              [
-                _c("img", {
-                  attrs: { src: "dist/img/Shaxx.jpg", alt: "Shaxx" }
-                })
-              ]
-            )
-          ])
-        ],
-        1
-      )
-    ],
-    1
-  )
+  return _c("div", [
+    _c("h1", [_vm._v("Destiny 2 Soundboard")]),
+    _vm._v(" "),
+    _c("p", [_vm._v("Click an image below to get started.")]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "grid" },
+      [
+        _c("router-link", { attrs: { to: "/soundboards/calus" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Calus" }
+            },
+            [_c("img", { attrs: { src: "dist/img/Calus.png", alt: "Calus" } })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/cayde" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Cayde" }
+            },
+            [_c("img", { attrs: { src: "dist/img/Cayde.gif", alt: "Cayde" } })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/crypt-ai" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "CryptAI" }
+            },
+            [
+              _c("img", {
+                attrs: { src: "dist/img/CryptAI.jpg", alt: "CryptAI" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/drifter" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Drifter" }
+            },
+            [
+              _c("img", {
+                attrs: { src: "dist/img/Drifter.jpg", alt: "Drifter" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/eramis" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Eramis" }
+            },
+            [
+              _c("img", {
+                attrs: { src: "dist/img/Eramis.png", alt: "Eramis" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/eris" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Eris" }
+            },
+            [_c("img", { attrs: { src: "dist/img/Eris.png", alt: "Eris" } })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/failsafe" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Failsafe" }
+            },
+            [
+              _c("img", {
+                attrs: { src: "dist/img/Failsafe.jpg", alt: "Failsafe" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/ghaul" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Ghaul" }
+            },
+            [_c("img", { attrs: { src: "dist/img/Ghaul.jpg", alt: "Ghaul" } })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/ikora" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Ikora" }
+            },
+            [_c("img", { attrs: { src: "dist/img/Ikora.jpg", alt: "Ikora" } })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/saint-14" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Saint14" }
+            },
+            [
+              _c("img", {
+                attrs: { src: "dist/img/Saint14.jpg", alt: "Saint14" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/saladin" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Saladin" }
+            },
+            [
+              _c("img", {
+                attrs: { src: "dist/img/Saladin.jpg", alt: "Saladin" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/shaxx" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Shaxx" }
+            },
+            [_c("img", { attrs: { src: "dist/img/Shaxx.jpg", alt: "Shaxx" } })]
+          )
+        ])
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -22863,7 +22856,7 @@ var render = function() {
     [
       _c("nav-menu"),
       _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
+      _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -23763,7 +23756,7 @@ var render = function() {
     [
       _c("nav-menu"),
       _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
+      _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -23853,7 +23846,7 @@ var render = function() {
     [
       _c("nav-menu"),
       _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
+      _c("h1", [_vm._v(_vm._s(_vm.name))]),
       _vm._v(" "),
       _c("input", {
         directives: [
