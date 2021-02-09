@@ -74,7 +74,7 @@
     /* Teal buttons */
     .button {
         color: #f5f5f5;
-        background: rgba(#008081, 0.8);
+        background: rgba(36,84,71,0.8);
         font-weight: 500;
         margin: 5px;
         box-sizing: border-box;
@@ -93,12 +93,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            border: 1px solid #4cbfbf;
+            border: 1px solid lighten(rgba(36,84,71,1), 15%);
             transition: 0.25s ease;
         }
 
         &:hover {
-            background: #008081;
+            background: rgba(36,84,71,1);
             &:after {
                 top: -5px;
                 left: -5px;

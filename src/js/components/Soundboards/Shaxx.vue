@@ -75,7 +75,7 @@
     /* Red buttons */
     .button {
         color: #f5f5f5;
-        background: rgba(183,140,37,0.8);
+        background: rgba(#C0442C,0.8);
         font-weight: 500;
         margin: 5px;
         box-sizing: border-box;
@@ -94,12 +94,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            border: 1px solid #ffce1f;
+            border: 1px solid lighten(#C0442C, 15%);
             transition: 0.25s ease;
         }
 
         &:hover {
-            background: #b78c25;
+            background: #C0442C;
             &:after {
                 top: -5px;
                 left: -5px;

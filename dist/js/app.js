@@ -3538,7 +3538,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-2ace6367] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid .button[data-v-2ace6367] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2ace6367]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2ace6367]:hover {\n  background: #008081;\n}\n.grid .button[data-v-2ace6367]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-2ace6367] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid .button[data-v-2ace6367] {\n  color: #f5f5f5;\n  background: rgba(36, 84, 71, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2ace6367]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #3b8a74;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2ace6367]:hover {\n  background: #245447;\n}\n.grid .button[data-v-2ace6367]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3690,7 +3690,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-2417353d] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Red buttons */\n}\n.grid .button[data-v-2417353d] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2417353d]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2417353d]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-2417353d]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-2417353d] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Red buttons */\n}\n.grid .button[data-v-2417353d] {\n  color: #f5f5f5;\n  background: rgba(192, 68, 44, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2417353d]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #da725e;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2417353d]:hover {\n  background: #C0442C;\n}\n.grid .button[data-v-2417353d]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3709,7 +3709,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-10eabaf9] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid .button[data-v-10eabaf9] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-10eabaf9]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-10eabaf9]:hover {\n  background: #008081;\n}\n.grid .button[data-v-10eabaf9]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-10eabaf9] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid.wip[data-v-10eabaf9] {\n  cursor: not-allowed;\n  opacity: 0.75;\n  filter: blur(3px);\n}\n.grid.wip .button[data-v-10eabaf9] {\n  pointer-events: none;\n}\n.grid .button[data-v-10eabaf9] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-10eabaf9]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-10eabaf9]:hover {\n  background: #008081;\n}\n.grid .button[data-v-10eabaf9]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3728,7 +3728,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-9c20a174] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Blue buttons */\n}\n.grid .button[data-v-9c20a174] {\n  color: #f5f5f5;\n  background: rgba(71, 156, 228, 0.4);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-9c20a174]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #f5f5f5;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-9c20a174]:hover {\n  background: #479ce4;\n}\n.grid .button[data-v-9c20a174]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-9c20a174] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Blue buttons */\n}\n.grid.wip[data-v-9c20a174] {\n  cursor: not-allowed;\n  opacity: 0.75;\n  filter: blur(3px);\n}\n.grid.wip .button[data-v-9c20a174] {\n  pointer-events: none;\n}\n.grid .button[data-v-9c20a174] {\n  color: #f5f5f5;\n  background: rgba(71, 156, 228, 0.4);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-9c20a174]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #f5f5f5;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-9c20a174]:hover {\n  background: #479ce4;\n}\n.grid .button[data-v-9c20a174]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -23962,7 +23962,7 @@ var render = function() {
       _vm.transcripts.length > 0
         ? _c(
             "div",
-            { staticClass: "grid" },
+            { staticClass: "grid wip" },
             _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",
@@ -24052,7 +24052,7 @@ var render = function() {
       _vm.transcripts.length > 0
         ? _c(
             "div",
-            { staticClass: "grid" },
+            { staticClass: "grid wip" },
             _vm._l(_vm.filteredTranscripts, function(transcript) {
               return _c(
                 "a",

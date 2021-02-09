@@ -3,7 +3,7 @@
         <nav-menu></nav-menu>
         <h1>{{name}} (WIP)</h1>
         <input type="text" placeholder="Type to search..." v-model="search">
-        <div class="grid" v-if="transcripts.length > 0">
+        <div class="grid wip" v-if="transcripts.length > 0">
             <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash"  v-tippy @click="createAndPlayAudioElement(transcript)">
                 {{shorten(transcript.Text, 25)}}
             </a>
@@ -70,6 +70,14 @@
     grid-template-columns: repeat(4, 1fr);
     background: rgb(18, 23, 28);
     
+    &.wip {
+        cursor: not-allowed;
+        opacity: 0.75; 
+        filter: blur(3px);
+        .button {
+            pointer-events: none;
+        }
+    }
 
     /* Teal buttons */
     .button {
