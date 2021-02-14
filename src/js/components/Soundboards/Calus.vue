@@ -48,7 +48,7 @@
                 });
             },
             fetchTranscripts(name){
-                axios.get(`dist/media/${this.dirname}/transcripts.json`).then(({data}) => {
+                axios.get(`https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/${this.dirname}/transcripts.json`).then(({data}) => {
                     // Get all Transcripts, then flatten to single array.
                     const response = [].concat(...data)
                     const arr = []
@@ -63,7 +63,7 @@
                 })
             },
             createAndPlayAudioElement(transcript) {
-                const audio = new Audio(`dist/media/${this.dirname}/${transcript.EntryHash}.mp3`);
+                const audio = new Audio(`https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/${this.dirname}/${transcript.EntryHash}.mp3`);
                 audio.play(); 
             },
             shorten(string, len) {
