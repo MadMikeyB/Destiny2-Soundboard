@@ -1929,6 +1929,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   components: {},
@@ -1975,6 +1976,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
@@ -1983,9 +2007,18 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {},
   watch: {},
   data: function data() {
-    return {};
+    return {
+      modal: false
+    };
   },
-  methods: {}
+  methods: {
+    showModal: function showModal() {
+      this.modal = !this.modal;
+    },
+    closeModal: function closeModal() {
+      this.modal = !this.modal;
+    }
+  }
 });
 
 /***/ }),
@@ -2924,6 +2957,105 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Riven.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/Riven.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Layout/NavMenu */ "./src/js/components/Layout/NavMenu.vue");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: [],
+  components: {
+    NavMenu: _Layout_NavMenu__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    filteredTranscripts: function filteredTranscripts() {
+      var _this = this;
+
+      return this.transcripts.filter(function (transcript) {
+        return transcript.Text.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
+  },
+  mounted: function mounted() {},
+  created: function created() {
+    this.fetchTranscripts(this.name);
+  },
+  watch: {},
+  data: function data() {
+    return {
+      name: 'Siren of Riven',
+      dirname: 'riven',
+      search: '',
+      transcripts: []
+    };
+  },
+  methods: {
+    fetchTranscripts: function fetchTranscripts(name) {
+      var _this2 = this;
+
+      axios.get('/dist/media/transcripts.json').then(function (_ref) {
+        var _ref2;
+
+        var data = _ref.data;
+
+        // Get all Transcripts, then flatten to single array.
+        var response = (_ref2 = []).concat.apply(_ref2, _toConsumableArray(data));
+
+        var arr = [];
+        response.forEach(function (item) {
+          if (item.Narrator == name) {
+            arr.push(item);
+          }
+        }, _this2);
+        _this2.transcripts = arr;
+      });
+    },
+    createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
+      var audio = new Audio("/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      audio.play();
+    },
+    shorten: function shorten(string, len) {
+      return string.substring(0, len + string.substring(len - 1).indexOf(' '));
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Saint-14.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/Saint-14.vue?vue&type=script&lang=js& ***!
@@ -3271,6 +3403,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
@@ -3370,6 +3503,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
@@ -3443,7 +3577,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "ul[data-v-37d5c869] {\n  list-style: none;\n  margin: 10px 0;\n  padding: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nul a[data-v-37d5c869] {\n  color: #f5f5f5;\n  background: rgba(102, 102, 102, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n  text-decoration: none;\n}\nul a[data-v-37d5c869]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #999999;\n  transition: 0.25s ease;\n}\nul a[data-v-37d5c869]:hover {\n  background: #666666;\n}\nul a[data-v-37d5c869]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, "ul[data-v-37d5c869] {\n  list-style: none;\n  margin: 10px 0;\n  padding: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n}\nul a[data-v-37d5c869] {\n  color: #f5f5f5;\n  background: rgba(102, 102, 102, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n  text-decoration: none;\n}\nul a[data-v-37d5c869]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #999999;\n  transition: 0.25s ease;\n}\nul a[data-v-37d5c869]:hover {\n  background: #666666;\n}\nul a[data-v-37d5c869]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3462,7 +3596,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "a[data-v-6d5585e3] {\n  text-decoration: underline;\n}\n.grid[data-v-6d5585e3] {\n  display: grid;\n  grid-template-columns: repeat(5, 1fr);\n}\n.grid div[data-v-6d5585e3] {\n  position: relative;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.grid div img[data-v-6d5585e3] {\n  width: 300px;\n  margin: 10px;\n}\n.grid div[data-v-6d5585e3]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid transparent;\n  transition: 0.25s ease;\n}\n.grid div[data-v-6d5585e3]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, "a[data-v-6d5585e3] {\n  cursor: pointer;\n  text-decoration: underline;\n}\n.grid[data-v-6d5585e3] {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, 320px);\n}\n.grid div[data-v-6d5585e3] {\n  position: relative;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.grid div img[data-v-6d5585e3] {\n  width: 300px;\n  margin: 10px;\n}\n.grid div[data-v-6d5585e3]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid transparent;\n  transition: 0.25s ease;\n}\n.grid div[data-v-6d5585e3]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}\n.modal[data-v-6d5585e3] {\n  background-color: rgba(0, 0, 0, 0.9);\n  border: 1px solid rgba(183, 140, 37, 0.8);\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 80%;\n}\n.modal__header[data-v-6d5585e3] {\n  border-bottom: 1px solid rgba(183, 140, 37, 0.8);\n  display: flex;\n  align-items: center;\n}\n.modal__header h2[data-v-6d5585e3] {\n  flex: 1;\n  padding-left: 20px;\n}\n.modal__header span[data-v-6d5585e3] {\n  cursor: pointer;\n  font-size: 48px;\n  width: 40px;\n}\n.modal__body[data-v-6d5585e3] {\n  padding: 20px;\n}\n.modal__body a[data-v-6d5585e3] {\n  color: rgba(183, 140, 37, 0.8);\n  text-decoration: underline;\n}", ""]);
 
 // exports
 
@@ -3481,7 +3615,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-4927977d] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Gold buttons */\n}\n.grid .button[data-v-4927977d] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-4927977d]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-4927977d]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-4927977d]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-4927977d] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Gold buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-4927977d] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-4927977d] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-4927977d] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-4927977d]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-4927977d]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-4927977d]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3500,16 +3634,16 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-49de23a6] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid .button[data-v-49de23a6] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-49de23a6]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-49de23a6]:hover {\n  background: #008081;\n}\n.grid .button[data-v-49de23a6]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-49de23a6] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Teal buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-49de23a6] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-49de23a6] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-49de23a6] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-49de23a6]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-49de23a6]:hover {\n  background: #008081;\n}\n.grid .button[data-v-49de23a6]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true&":
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/import-glob-loader!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true& ***!
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/import-glob-loader!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true& ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3519,7 +3653,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-ad67b132] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid .button[data-v-ad67b132] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-ad67b132]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-ad67b132]:hover {\n  background: #008081;\n}\n.grid .button[data-v-ad67b132]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-ad67b132] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Teal buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-ad67b132] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-ad67b132] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-ad67b132] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-ad67b132]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-ad67b132]:hover {\n  background: #008081;\n}\n.grid .button[data-v-ad67b132]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3538,7 +3672,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-2ace6367] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid .button[data-v-2ace6367] {\n  color: #f5f5f5;\n  background: rgba(36, 84, 71, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2ace6367]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #3b8a74;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2ace6367]:hover {\n  background: #245447;\n}\n.grid .button[data-v-2ace6367]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-2ace6367] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Teal buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-2ace6367] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-2ace6367] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-2ace6367] {\n  color: #f5f5f5;\n  background: rgba(36, 84, 71, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2ace6367]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #3b8a74;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2ace6367]:hover {\n  background: #245447;\n}\n.grid .button[data-v-2ace6367]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3557,7 +3691,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-71a5fcc2] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid .button[data-v-71a5fcc2] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-71a5fcc2]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-71a5fcc2]:hover {\n  background: #008081;\n}\n.grid .button[data-v-71a5fcc2]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-71a5fcc2] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Teal buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-71a5fcc2] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-71a5fcc2] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-71a5fcc2] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-71a5fcc2]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-71a5fcc2]:hover {\n  background: #008081;\n}\n.grid .button[data-v-71a5fcc2]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3576,7 +3710,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-579f32d4] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid .button[data-v-579f32d4] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-579f32d4]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-579f32d4]:hover {\n  background: #008081;\n}\n.grid .button[data-v-579f32d4]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-579f32d4] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Teal buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-579f32d4] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-579f32d4] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-579f32d4] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-579f32d4]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-579f32d4]:hover {\n  background: #008081;\n}\n.grid .button[data-v-579f32d4]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3595,7 +3729,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-f083b3ac] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Gold buttons */\n}\n.grid .button[data-v-f083b3ac] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-f083b3ac]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-f083b3ac]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-f083b3ac]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-f083b3ac] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Gold buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-f083b3ac] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-f083b3ac] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-f083b3ac] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-f083b3ac]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-f083b3ac]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-f083b3ac]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3614,7 +3748,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-2b1a5d48] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid .button[data-v-2b1a5d48] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2b1a5d48]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2b1a5d48]:hover {\n  background: #008081;\n}\n.grid .button[data-v-2b1a5d48]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-2b1a5d48] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Teal buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-2b1a5d48] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-2b1a5d48] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-2b1a5d48] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2b1a5d48]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2b1a5d48]:hover {\n  background: #008081;\n}\n.grid .button[data-v-2b1a5d48]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3633,7 +3767,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-6a24730d] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Gold buttons */\n}\n.grid .button[data-v-6a24730d] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-6a24730d]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-6a24730d]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-6a24730d]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-6a24730d] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Gold buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-6a24730d] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-6a24730d] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-6a24730d] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-6a24730d]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-6a24730d]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-6a24730d]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/import-glob-loader!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".grid[data-v-2d9dd099] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Gold buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-2d9dd099] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-2d9dd099] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-2d9dd099] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2d9dd099]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2d9dd099]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-2d9dd099]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3652,7 +3805,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-6046350e] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Pink buttons */\n}\n.grid .button[data-v-6046350e] {\n  color: #f5f5f5;\n  background: rgba(82, 38, 84, 0.75);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-6046350e]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffb8f4;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-6046350e]:hover {\n  background: #522654;\n}\n.grid .button[data-v-6046350e]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-6046350e] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Pink buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-6046350e] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-6046350e] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-6046350e] {\n  color: #f5f5f5;\n  background: rgba(82, 38, 84, 0.75);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-6046350e]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffb8f4;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-6046350e]:hover {\n  background: #522654;\n}\n.grid .button[data-v-6046350e]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3671,7 +3824,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-18f316b7] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Gold buttons */\n}\n.grid .button[data-v-18f316b7] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-18f316b7]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-18f316b7]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-18f316b7]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-18f316b7] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Gold buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-18f316b7] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-18f316b7] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-18f316b7] {\n  color: #f5f5f5;\n  background: rgba(183, 140, 37, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-18f316b7]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #ffce1f;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-18f316b7]:hover {\n  background: #b78c25;\n}\n.grid .button[data-v-18f316b7]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3690,7 +3843,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-2417353d] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Red buttons */\n}\n.grid .button[data-v-2417353d] {\n  color: #f5f5f5;\n  background: rgba(192, 68, 44, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2417353d]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #da725e;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2417353d]:hover {\n  background: #C0442C;\n}\n.grid .button[data-v-2417353d]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-2417353d] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Red buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-2417353d] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-2417353d] {\n    grid-template-columns: 1fr;\n}\n}\n.grid .button[data-v-2417353d] {\n  color: #f5f5f5;\n  background: rgba(192, 68, 44, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-2417353d]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #da725e;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-2417353d]:hover {\n  background: #C0442C;\n}\n.grid .button[data-v-2417353d]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3709,7 +3862,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-10eabaf9] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Teal buttons */\n}\n.grid.wip[data-v-10eabaf9] {\n  cursor: not-allowed;\n  opacity: 0.75;\n  filter: blur(3px);\n}\n.grid.wip .button[data-v-10eabaf9] {\n  pointer-events: none;\n}\n.grid .button[data-v-10eabaf9] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-10eabaf9]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-10eabaf9]:hover {\n  background: #008081;\n}\n.grid .button[data-v-10eabaf9]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-10eabaf9] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Teal buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-10eabaf9] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-10eabaf9] {\n    grid-template-columns: 1fr;\n}\n}\n.grid.wip[data-v-10eabaf9] {\n  cursor: not-allowed;\n  opacity: 0.75;\n  filter: blur(3px);\n}\n.grid.wip .button[data-v-10eabaf9] {\n  pointer-events: none;\n}\n.grid .button[data-v-10eabaf9] {\n  color: #f5f5f5;\n  background: rgba(0, 128, 129, 0.8);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-10eabaf9]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #4cbfbf;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-10eabaf9]:hover {\n  background: #008081;\n}\n.grid .button[data-v-10eabaf9]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
 
 // exports
 
@@ -3728,7 +3881,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid[data-v-9c20a174] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  background: #12171c;\n  /* Blue buttons */\n}\n.grid.wip[data-v-9c20a174] {\n  cursor: not-allowed;\n  opacity: 0.75;\n  filter: blur(3px);\n}\n.grid.wip .button[data-v-9c20a174] {\n  pointer-events: none;\n}\n.grid .button[data-v-9c20a174] {\n  color: #f5f5f5;\n  background: rgba(71, 156, 228, 0.4);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-9c20a174]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #f5f5f5;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-9c20a174]:hover {\n  background: #479ce4;\n}\n.grid .button[data-v-9c20a174]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+exports.push([module.i, ".grid[data-v-9c20a174] {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  /* Blue buttons */\n}\n@media all and (max-width: 992px) {\n.grid[data-v-9c20a174] {\n    grid-template-columns: repeat(3, 1fr);\n}\n}\n@media all and (max-width: 600px) {\n.grid[data-v-9c20a174] {\n    grid-template-columns: 1fr;\n}\n}\n.grid.wip[data-v-9c20a174] {\n  cursor: not-allowed;\n  opacity: 0.75;\n  filter: blur(3px);\n}\n.grid.wip .button[data-v-9c20a174] {\n  pointer-events: none;\n}\n.grid .button[data-v-9c20a174] {\n  color: #f5f5f5;\n  background: rgba(71, 156, 228, 0.4);\n  font-weight: 500;\n  margin: 5px;\n  box-sizing: border-box;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 15px;\n  text-transform: uppercase;\n}\n.grid .button[data-v-9c20a174]:after {\n  position: absolute;\n  content: \"\";\n  display: block;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border: 1px solid #f5f5f5;\n  transition: 0.25s ease;\n}\n.grid .button[data-v-9c20a174]:hover {\n  background: #479ce4;\n}\n.grid .button[data-v-9c20a174]:hover:after {\n  top: -5px;\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  border-color: #f5f5f5;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\nbody[data-v-ad67b132] {\n    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url(https://d1lss44hh2trtw.cloudfront.net/assets/article/2020/11/21/deep-stone-crypt-raid-guide-destiny-2_feature.jpg);\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n    background-size: cover;\n}\n", ""]);
 
 // exports
 
@@ -21500,15 +21672,15 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true&":
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/import-glob-loader!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true& ***!
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/import-glob-loader!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true& ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/import-glob-loader!../../../../node_modules/vue-loader/lib??vue-loader-options!./CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true&");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/import-glob-loader!../../../../node_modules/vue-loader/lib??vue-loader-options!./CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -21710,6 +21882,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/import-glob-loader!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/import-glob-loader!../../../../node_modules/vue-loader/lib??vue-loader-options!./Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Saint-14.vue?vue&type=style&index=0&id=6046350e&lang=scss&scoped=true&":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/import-glob-loader!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/Saint-14.vue?vue&type=style&index=0&id=6046350e&lang=scss&scoped=true& ***!
@@ -21839,6 +22041,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/import-glob-loader!../../../../node_modules/vue-loader/lib??vue-loader-options!./Zavala.vue?vue&type=style&index=0&id=9c20a174&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Zavala.vue?vue&type=style&index=0&id=9c20a174&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -22554,6 +22786,16 @@ var render = function() {
       _c(
         "li",
         [
+          _c("router-link", { attrs: { to: "/soundboards/siren-of-riven" } }, [
+            _vm._v("Siren of Riven")
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "li",
+        [
           _c("router-link", { attrs: { to: "/soundboards/saint-14" } }, [
             _vm._v("Saint-14")
           ])
@@ -22630,7 +22872,11 @@ var render = function() {
     _vm._v(" "),
     _c("p", [_vm._v("Click an image below to get started.")]),
     _vm._v(" "),
-    _vm._m(0),
+    _c("p", [
+      _c("a", { on: { click: _vm.showModal } }, [
+        _vm._v("Disclaimers & Credits")
+      ])
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -22751,6 +22997,17 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/siren-of-riven" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Riven" }
+            },
+            [_c("img", { attrs: { src: "dist/img/Riven.jpg", alt: "Riven" } })]
+          )
+        ]),
+        _vm._v(" "),
         _c("router-link", { attrs: { to: "/soundboards/saint-14" } }, [
           _c(
             "div",
@@ -22790,10 +23047,48 @@ var render = function() {
             },
             [_c("img", { attrs: { src: "dist/img/Shaxx.jpg", alt: "Shaxx" } })]
           )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/crow" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Crow" }
+            },
+            [_c("img", { attrs: { src: "dist/img/Crow.jpg", alt: "Crow" } })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/soundboards/zavala" } }, [
+          _c(
+            "div",
+            {
+              directives: [{ name: "tippy", rawName: "v-tippy" }],
+              attrs: { title: "Zavala" }
+            },
+            [
+              _c("img", {
+                attrs: { src: "dist/img/Zavala.png", alt: "Zavala" }
+              })
+            ]
+          )
         ])
       ],
       1
-    )
+    ),
+    _vm._v(" "),
+    _vm.modal
+      ? _c("div", { staticClass: "modal" }, [
+          _c("div", { staticClass: "modal__header" }, [
+            _c("h2", [_vm._v("Disclaimers & Credits")]),
+            _vm._v(" "),
+            _c("span", { on: { click: _vm.closeModal } }, [_vm._v("×")])
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = [
@@ -22801,8 +23096,133 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("a", { attrs: { href: "" } }, [_vm._v("Disclaimers & Credits")])
+    return _c("div", { staticClass: "modal__body" }, [
+      _c("strong", [_vm._v("Disclaimer")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "I do not own any rights to the sound files used in this repository. All sound content in this project is owned by "
+        ),
+        _c(
+          "a",
+          {
+            attrs: {
+              target: "_blank",
+              rel: "nofollow noopener",
+              href: "https://bungie.net"
+            }
+          },
+          [_vm._v("Bungie, Inc")]
+        ),
+        _vm._v(". and their respective owners.")
+      ]),
+      _vm._v(" "),
+      _c("strong", [_vm._v("Credits")]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: {
+                rel: "nofollow noopener",
+                target: "_blank",
+                href: "https://twitter.com/GinsorKR"
+              }
+            },
+            [_vm._v("GinsorKR")]
+          ),
+          _vm._v("'s Audio Tool")
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: {
+                rel: "nofollow noopener",
+                target: "_blank",
+                href: "https://github.com/ElbowBaggins/GinsorAudioTool2Plus"
+              }
+            },
+            [_vm._v("ElbowBaggins Audio Tool")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c(
+            "a",
+            {
+              attrs: {
+                rel: "nofollow noopener",
+                target: "_blank",
+                href: "https://www.destinypedia.com/"
+              }
+            },
+            [_vm._v("Destinypedia")]
+          ),
+          _vm._v(" (Images)")
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("evilarceus — "),
+          _c(
+            "a",
+            {
+              attrs: {
+                rel: "nofollow noopener",
+                target: "_blank",
+                href: "https://github.com/evilarceus"
+              }
+            },
+            [_vm._v("https://github.com/evilarceus")]
+          ),
+          _vm._v(" - for starting this project off.")
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("MadMikeyB — "),
+          _c(
+            "a",
+            {
+              attrs: {
+                rel: "nofollow noopener",
+                target: "_blank",
+                href: "https://twitter.com/MadMikeyB"
+              }
+            },
+            [_vm._v("https://twitter.com/MadMikeyB")]
+          ),
+          _vm._v(" - for this latest incarnation")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("strong", [_vm._v("Contributing")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("Please see "),
+        _c("a", {
+          attrs: {
+            rel: "nofollow noopener",
+            target: "_blank",
+            href:
+              "https://github.com/madmikeyb/destiny2-soundboard/CONTRIBUTING.md"
+          }
+        }),
+        _vm._v(" or "),
+        _c(
+          "a",
+          {
+            attrs: {
+              rel: "nofollow noopener",
+              target: "_blank",
+              href:
+                "https://github.com/MadMikeyB/Destiny2-Soundboard/discussions/new"
+            }
+          },
+          [_vm._v("start a discussion requesting the character you wish")]
+        )
+      ])
     ])
   }
 ]
@@ -22902,8 +23322,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -22992,8 +23412,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23082,8 +23502,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23172,8 +23592,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23262,8 +23682,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23352,8 +23772,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23442,8 +23862,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23532,8 +23952,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23622,8 +24042,98 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
+                  )
+                ]
+              )
+            }),
+            0
+          )
+        : _c("div", [
+            _c("h1", [
+              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+            ])
+          ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Riven.vue?vue&type=template&id=2d9dd099&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/js/components/Soundboards/Riven.vue?vue&type=template&id=2d9dd099&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("nav-menu"),
+      _vm._v(" "),
+      _c("h1", [_vm._v(_vm._s(_vm.name))]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
+        ],
+        attrs: { type: "text", placeholder: "Type to search..." },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _vm.transcripts.length > 0
+        ? _c(
+            "div",
+            { staticClass: "grid" },
+            _vm._l(_vm.filteredTranscripts, function(transcript) {
+              return _c(
+                "a",
+                {
+                  directives: [{ name: "tippy", rawName: "v-tippy" }],
+                  staticClass: "button",
+                  attrs: {
+                    title: transcript.Text,
+                    "data-hex": transcript.EntryHash
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.createAndPlayAudioElement(transcript)
+                    }
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23712,8 +24222,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23802,8 +24312,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23892,8 +24402,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -23938,6 +24448,14 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
       _vm._v(" "),
+      _c("p", [
+        _vm._v("So " + _vm._s(_vm.name) + " has "),
+        _c("strong", [_vm._v("a lot")]),
+        _vm._v(
+          " of voice lines. These take time to save individually. Their voice lines will come soon, but are not quite there yet."
+        )
+      ]),
+      _vm._v(" "),
       _c("input", {
         directives: [
           {
@@ -23982,8 +24500,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -24028,6 +24546,14 @@ var render = function() {
       _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.name) + " (WIP)")]),
       _vm._v(" "),
+      _c("p", [
+        _vm._v("So " + _vm._s(_vm.name) + " has "),
+        _c("strong", [_vm._v("a lot")]),
+        _vm._v(
+          " of voice lines. Like. a lot. These take time to save individually. Their voice lines will come soon, but are not quite there yet."
+        )
+      ]),
+      _vm._v(" "),
       _c("input", {
         directives: [
           {
@@ -24072,8 +24598,8 @@ var render = function() {
                 [
                   _vm._v(
                     "\n            " +
-                      _vm._s(_vm.shorten(transcript.Text, 25)) +
-                      "\n        "
+                      _vm._s(_vm.shorten(transcript.Text, 30)) +
+                      "...\n        "
                   )
                 ]
               )
@@ -44669,6 +45195,7 @@ var map = {
 	"./components/Soundboards/Failsafe.vue": "./src/js/components/Soundboards/Failsafe.vue",
 	"./components/Soundboards/Ghaul.vue": "./src/js/components/Soundboards/Ghaul.vue",
 	"./components/Soundboards/Ikora.vue": "./src/js/components/Soundboards/Ikora.vue",
+	"./components/Soundboards/Riven.vue": "./src/js/components/Soundboards/Riven.vue",
 	"./components/Soundboards/Saint-14.vue": "./src/js/components/Soundboards/Saint-14.vue",
 	"./components/Soundboards/Saladin.vue": "./src/js/components/Soundboards/Saladin.vue",
 	"./components/Soundboards/Shaxx.vue": "./src/js/components/Soundboards/Shaxx.vue",
@@ -44752,6 +45279,9 @@ app.$on('scrollToTop', function () {
     behavior: 'smooth'
   });
 });
+var backgroundImages = ['dist/img/background/calus.webp', 'dist/img/background/beyondlight.webp', 'dist/img/background/COS.jpg', 'dist/img/background/dsc.jpg', 'dist/img/background/eow.webp', 'dist/img/background/forsaken.png', 'dist/img/background/gos.jpeg', 'dist/img/background/hunter.jpg', 'dist/img/background/levi.png', 'dist/img/background/levi.webp', 'dist/img/background/lw.jpg', 'dist/img/background/lw2.jpeg', 'dist/img/background/sotp.jpg', 'dist/img/background/spire.jpg', 'dist/img/background/traveler.jpg'];
+var selectedRandomBackground = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+document.body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.95)), url('" + selectedRandomBackground + "')";
 
 /***/ }),
 
@@ -45183,8 +45713,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CryptAI_vue_vue_type_template_id_ad67b132_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CryptAI.vue?vue&type=template&id=ad67b132&scoped=true& */ "./src/js/components/Soundboards/CryptAI.vue?vue&type=template&id=ad67b132&scoped=true&");
 /* harmony import */ var _CryptAI_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CryptAI.vue?vue&type=script&lang=js& */ "./src/js/components/Soundboards/CryptAI.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _CryptAI_vue_vue_type_style_index_0_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true& */ "./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _CryptAI_vue_vue_type_style_index_0_id_ad67b132_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css& */ "./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css&");
+/* harmony import */ var _CryptAI_vue_vue_type_style_index_1_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true& */ "./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -45193,7 +45725,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__["default"])(
   _CryptAI_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _CryptAI_vue_vue_type_template_id_ad67b132_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _CryptAI_vue_vue_type_template_id_ad67b132_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -45225,18 +45757,34 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true&":
+/***/ "./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css&":
+/*!************************************************************************************************************!*\
+  !*** ./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css& ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true&":
 /*!*************************************************************************************************************!*\
-  !*** ./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true& ***!
+  !*** ./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true& ***!
   \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/import-glob-loader!../../../../node_modules/vue-loader/lib??vue-loader-options!./CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=0&id=ad67b132&lang=scss&scoped=true&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_0_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_1_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/import-glob-loader!../../../../node_modules/vue-loader/lib??vue-loader-options!./CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/CryptAI.vue?vue&type=style&index=1&id=ad67b132&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_1_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_1_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_1_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_CryptAI_vue_vue_type_style_index_1_id_ad67b132_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -45781,6 +46329,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/Soundboards/Riven.vue":
+/*!*************************************************!*\
+  !*** ./src/js/components/Soundboards/Riven.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Riven_vue_vue_type_template_id_2d9dd099_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Riven.vue?vue&type=template&id=2d9dd099&scoped=true& */ "./src/js/components/Soundboards/Riven.vue?vue&type=template&id=2d9dd099&scoped=true&");
+/* harmony import */ var _Riven_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Riven.vue?vue&type=script&lang=js& */ "./src/js/components/Soundboards/Riven.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Riven_vue_vue_type_style_index_0_id_2d9dd099_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true& */ "./src/js/components/Soundboards/Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Riven_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Riven_vue_vue_type_template_id_2d9dd099_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Riven_vue_vue_type_template_id_2d9dd099_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "2d9dd099",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "src/js/components/Soundboards/Riven.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/js/components/Soundboards/Riven.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./src/js/components/Soundboards/Riven.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Riven.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Riven.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/js/components/Soundboards/Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true&":
+/*!***********************************************************************************************************!*\
+  !*** ./src/js/components/Soundboards/Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_style_index_0_id_2d9dd099_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/import-glob-loader!../../../../node_modules/vue-loader/lib??vue-loader-options!./Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/import-glob-loader/index.js!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Riven.vue?vue&type=style&index=0&id=2d9dd099&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_style_index_0_id_2d9dd099_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_style_index_0_id_2d9dd099_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_style_index_0_id_2d9dd099_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_import_glob_loader_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_style_index_0_id_2d9dd099_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./src/js/components/Soundboards/Riven.vue?vue&type=template&id=2d9dd099&scoped=true&":
+/*!********************************************************************************************!*\
+  !*** ./src/js/components/Soundboards/Riven.vue?vue&type=template&id=2d9dd099&scoped=true& ***!
+  \********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_template_id_2d9dd099_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Riven.vue?vue&type=template&id=2d9dd099&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/js/components/Soundboards/Riven.vue?vue&type=template&id=2d9dd099&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_template_id_2d9dd099_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Riven_vue_vue_type_template_id_2d9dd099_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./src/js/components/Soundboards/Saint-14.vue":
 /*!****************************************************!*\
   !*** ./src/js/components/Soundboards/Saint-14.vue ***!
@@ -46238,15 +46873,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Soundboards_Failsafe__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Soundboards/Failsafe */ "./src/js/components/Soundboards/Failsafe.vue");
 /* harmony import */ var _components_Soundboards_Ghaul__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Soundboards/Ghaul */ "./src/js/components/Soundboards/Ghaul.vue");
 /* harmony import */ var _components_Soundboards_Ikora__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Soundboards/Ikora */ "./src/js/components/Soundboards/Ikora.vue");
-/* harmony import */ var _components_Soundboards_Saint_14__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Soundboards/Saint-14 */ "./src/js/components/Soundboards/Saint-14.vue");
-/* harmony import */ var _components_Soundboards_Saladin__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/Soundboards/Saladin */ "./src/js/components/Soundboards/Saladin.vue");
-/* harmony import */ var _components_Soundboards_Shaxx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/Soundboards/Shaxx */ "./src/js/components/Soundboards/Shaxx.vue");
-/* harmony import */ var _components_Soundboards_TheCrow__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/Soundboards/TheCrow */ "./src/js/components/Soundboards/TheCrow.vue");
-/* harmony import */ var _components_Soundboards_Zavala__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/Soundboards/Zavala */ "./src/js/components/Soundboards/Zavala.vue");
-/* harmony import */ var _components_Page_PageNotFound__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/Page/PageNotFound */ "./src/js/components/Page/PageNotFound.vue");
+/* harmony import */ var _components_Soundboards_Riven__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Soundboards/Riven */ "./src/js/components/Soundboards/Riven.vue");
+/* harmony import */ var _components_Soundboards_Saint_14__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/Soundboards/Saint-14 */ "./src/js/components/Soundboards/Saint-14.vue");
+/* harmony import */ var _components_Soundboards_Saladin__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/Soundboards/Saladin */ "./src/js/components/Soundboards/Saladin.vue");
+/* harmony import */ var _components_Soundboards_Shaxx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/Soundboards/Shaxx */ "./src/js/components/Soundboards/Shaxx.vue");
+/* harmony import */ var _components_Soundboards_TheCrow__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/Soundboards/TheCrow */ "./src/js/components/Soundboards/TheCrow.vue");
+/* harmony import */ var _components_Soundboards_Zavala__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/Soundboards/Zavala */ "./src/js/components/Soundboards/Zavala.vue");
+/* harmony import */ var _components_Page_PageNotFound__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/Page/PageNotFound */ "./src/js/components/Page/PageNotFound.vue");
 
 
  // Soundboards
+
 
 
 
@@ -46312,30 +46949,34 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     name: 'ikora',
     component: _components_Soundboards_Ikora__WEBPACK_IMPORTED_MODULE_11__["default"]
   }, {
+    path: '/soundboards/siren-of-riven',
+    name: 'siren-of-riven',
+    component: _components_Soundboards_Riven__WEBPACK_IMPORTED_MODULE_12__["default"]
+  }, {
     path: '/soundboards/saint-14',
     name: 'saint14',
-    component: _components_Soundboards_Saint_14__WEBPACK_IMPORTED_MODULE_12__["default"]
+    component: _components_Soundboards_Saint_14__WEBPACK_IMPORTED_MODULE_13__["default"]
   }, {
     path: '/soundboards/saladin',
     name: 'saladin',
-    component: _components_Soundboards_Saladin__WEBPACK_IMPORTED_MODULE_13__["default"]
+    component: _components_Soundboards_Saladin__WEBPACK_IMPORTED_MODULE_14__["default"]
   }, {
     path: '/soundboards/shaxx',
     name: 'shaxx',
-    component: _components_Soundboards_Shaxx__WEBPACK_IMPORTED_MODULE_14__["default"]
+    component: _components_Soundboards_Shaxx__WEBPACK_IMPORTED_MODULE_15__["default"]
   }, {
     path: '/soundboards/crow',
     name: 'crow',
-    component: _components_Soundboards_TheCrow__WEBPACK_IMPORTED_MODULE_15__["default"]
+    component: _components_Soundboards_TheCrow__WEBPACK_IMPORTED_MODULE_16__["default"]
   }, {
     path: '/soundboards/zavala',
     name: 'zavala',
-    component: _components_Soundboards_Zavala__WEBPACK_IMPORTED_MODULE_16__["default"]
+    component: _components_Soundboards_Zavala__WEBPACK_IMPORTED_MODULE_17__["default"]
   }, // 404
   {
     path: '**',
     name: 'PageNotFound',
-    component: _components_Page_PageNotFound__WEBPACK_IMPORTED_MODULE_17__["default"]
+    component: _components_Page_PageNotFound__WEBPACK_IMPORTED_MODULE_18__["default"]
   }],
   scrollBehavior: function scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

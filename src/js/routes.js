@@ -12,6 +12,7 @@ import Eris from './components/Soundboards/Eris'
 import Failsafe from './components/Soundboards/Failsafe'
 import Ghaul from './components/Soundboards/Ghaul'
 import Ikora from './components/Soundboards/Ikora'
+import Riven from './components/Soundboards/Riven'
 import Saint14 from './components/Soundboards/Saint-14'
 import Saladin from './components/Soundboards/Saladin'
 import Shaxx from './components/Soundboards/Shaxx'
@@ -80,6 +81,11 @@ const router = new VueRouter({
             path: '/soundboards/ikora',
             name: 'ikora',
             component: Ikora
+        },
+        {
+            path: '/soundboards/siren-of-riven',
+            name: 'siren-of-riven',
+            component: Riven
         },
         {
             path: '/soundboards/saint-14',

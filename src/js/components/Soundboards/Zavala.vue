@@ -2,10 +2,11 @@
     <div>
         <nav-menu></nav-menu>
         <h1>{{name}} (WIP)</h1>
+        <p>So {{name}} has <strong>a lot</strong> of voice lines. Like. a lot. These take time to save individually. Their voice lines will come soon, but are not quite there yet.</p>
         <input type="text" placeholder="Type to search..." v-model="search">
         <div class="grid wip" v-if="transcripts.length > 0">
             <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash"  v-tippy @click="createAndPlayAudioElement(transcript)">
-                {{shorten(transcript.Text, 25)}}
+                {{shorten(transcript.Text, 30)}}...
             </a>
         </div>
         <div v-else>
@@ -68,7 +69,15 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background: rgb(18, 23, 28);
+    
+    @media all and (max-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media all and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+
     &.wip {
         cursor: not-allowed;
         opacity: 0.75; 

@@ -43,3 +43,25 @@ app.$on('scrollToTop', function() {
         behavior: 'smooth' 
     });
 })
+
+
+var backgroundImages = [
+    'dist/img/background/calus.webp',
+    'dist/img/background/beyondlight.webp',
+    'dist/img/background/COS.jpg',
+    'dist/img/background/dsc.jpg',
+    'dist/img/background/eow.webp',
+    'dist/img/background/forsaken.png',
+    'dist/img/background/gos.jpeg',
+    'dist/img/background/hunter.jpg',
+    'dist/img/background/levi.png',
+    'dist/img/background/levi.webp',
+    'dist/img/background/lw.jpg',
+    'dist/img/background/lw2.jpeg',
+    'dist/img/background/sotp.jpg',
+    'dist/img/background/spire.jpg',
+    'dist/img/background/traveler.jpg'
+];
+
+var selectedRandomBackground = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+document.body.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.95)), url('"+selectedRandomBackground+"')"; 

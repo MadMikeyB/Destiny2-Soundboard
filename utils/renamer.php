@@ -1,6 +1,6 @@
 <?php
 /** ========= EDIT PATH HERE =========== **/
-$basePath = "../dist/media/saint-14";
+$basePath = "../dist/media/riven";
 /** ========= STOP EDITING ============= **/
 @exec("mkdir ". $basePath . "/renamed");
 foreach (new DirectoryIterator($basePath) as $fileInfo) {

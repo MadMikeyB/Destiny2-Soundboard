@@ -5,7 +5,7 @@
         <input type="text" placeholder="Type to search..." v-model="search">
         <div class="grid" v-if="transcripts.length > 0">
             <a class="button" v-for="transcript in filteredTranscripts" :title="transcript.Text" :data-hex="transcript.EntryHash"  v-tippy @click="createAndPlayAudioElement(transcript)">
-                {{shorten(transcript.Text, 25)}}
+                {{shorten(transcript.Text, 30)}}...
             </a>
         </div>
         <div v-else>
@@ -64,12 +64,28 @@
     };
 </script>
 
+<style scoped>
+    body {
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url(https://d1lss44hh2trtw.cloudfront.net/assets/article/2020/11/21/deep-stone-crypt-raid-guide-destiny-2_feature.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
 <style lang="scss" scoped>
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background: rgb(18, 23, 28);
     
+    @media all and (max-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media all and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 
     /* Teal buttons */
     .button {

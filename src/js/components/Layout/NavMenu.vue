@@ -10,6 +10,7 @@
             <li><router-link to="/soundboards/failsafe">Failsafe</router-link></li>
             <li><router-link to="/soundboards/ghaul">Ghaul</router-link></li>
             <li><router-link to="/soundboards/ikora">Ikora</router-link></li>
+            <li><router-link to="/soundboards/siren-of-riven">Siren of Riven</router-link></li>
             <li><router-link to="/soundboards/saint-14">Saint-14</router-link></li>
             <li><router-link to="/soundboards/saladin">Saladin</router-link></li>
             <li><router-link to="/soundboards/shaxx">Lord Shaxx</router-link></li>
@@ -41,6 +42,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
 
         a {
             color: #f5f5f5;
