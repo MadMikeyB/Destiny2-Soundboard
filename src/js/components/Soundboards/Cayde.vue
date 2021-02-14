@@ -9,7 +9,7 @@
             </a>
         </div>
         <div v-else>
-            <h1>{{name}}'s audio files have been sunset 😭</h1>
+            <h1>We're having trouble loading {{name}}'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu.</h1>
         </div>
     </div>
 </template>
