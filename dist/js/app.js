@@ -2124,7 +2124,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchLegacyDict: function fetchLegacyDict() {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/legacy_dict.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/legacy_dict.json').then(function (_ref) {
         var data = _ref.data;
         _this2.dict = data;
       });
@@ -2132,7 +2132,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this3 = this;
 
-      axios.get("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/transcripts.json")).then(function (_ref2) {
+      axios.get("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/transcripts.json")).then(function (_ref2) {
         var _ref3;
 
         var data = _ref2.data;
@@ -2151,7 +2151,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -2232,7 +2232,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -2250,7 +2250,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -2331,7 +2331,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -2349,7 +2349,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -2430,7 +2430,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -2448,7 +2448,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -2529,7 +2529,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -2550,7 +2550,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -2631,7 +2631,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -2649,7 +2649,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -2730,7 +2730,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -2748,7 +2748,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -2829,7 +2829,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -2847,7 +2847,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -2928,7 +2928,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -2946,7 +2946,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -3027,7 +3027,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -3045,7 +3045,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -3127,7 +3127,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -3145,7 +3145,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -3228,7 +3228,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchLegacyDict: function fetchLegacyDict() {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/legacy_dict.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/legacy_dict.json').then(function (_ref) {
         var data = _ref.data;
         _this2.dict = data;
       });
@@ -3236,7 +3236,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this3 = this;
 
-      axios.get("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/transcripts.json")).then(function (_ref2) {
+      axios.get("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/transcripts.json")).then(function (_ref2) {
         var _ref3;
 
         var data = _ref2.data;
@@ -3255,7 +3255,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -3336,7 +3336,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/transcripts.json")).then(function (_ref) {
+      axios.get("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/transcripts.json")).then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -3354,7 +3354,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
@@ -3436,7 +3436,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     fetchTranscripts: function fetchTranscripts(name) {
       var _this2 = this;
 
-      axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/transcripts.json').then(function (_ref) {
+      axios.get('https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/transcripts.json').then(function (_ref) {
         var _ref2;
 
         var data = _ref.data;
@@ -3454,7 +3454,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     },
     createAndPlayAudioElement: function createAndPlayAudioElement(transcript) {
-      var audio = new Audio("https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
+      var audio = new Audio("https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/".concat(this.dirname, "/").concat(transcript.EntryHash, ".mp3"));
       audio.play();
     },
     shorten: function shorten(string, len) {
