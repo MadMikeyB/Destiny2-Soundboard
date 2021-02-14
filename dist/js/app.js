@@ -23336,7 +23336,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -23426,7 +23430,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -23516,7 +23524,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -23606,7 +23618,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -23696,7 +23712,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -23786,7 +23806,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -23876,7 +23900,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -23966,7 +23994,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -24056,7 +24088,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -24146,7 +24182,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -24236,7 +24276,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -24326,7 +24370,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -24416,7 +24464,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -24514,7 +24566,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
@@ -24612,7 +24668,11 @@ var render = function() {
           )
         : _c("div", [
             _c("h1", [
-              _vm._v(_vm._s(_vm.name) + "'s audio files have been sunset 😭")
+              _vm._v(
+                "We're having trouble loading " +
+                  _vm._s(_vm.name) +
+                  "'s audio files right now. Try refreshing. If that does not work, please click through some soundboards and come back to this page through the navigation menu."
+              )
             ])
           ])
     ],
