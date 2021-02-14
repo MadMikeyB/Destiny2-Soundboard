@@ -2,9 +2,10 @@
 
 ## v2.0.0
 
+![Destiny 2 Soundboard](https://media2.giphy.com/media/VBVWEKJMXUl20/giphy.gif "Destiny 2 Soundboard")
+
 ## [Take me to the Soundboard](https://madmikeyb.github.io/Destiny2-Soundboard/)
 
-![Destiny 2 Soundboard](https://i.imgur.com/ZZb3pt9.gif "Destiny 2 Soundboard")
 
 ## About
 
