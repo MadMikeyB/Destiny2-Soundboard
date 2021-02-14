@@ -41,7 +41,7 @@
         },
         methods: {
             fetchTranscripts(name){
-                axios.get('/dist/media/transcripts.json').then(({data}) => {
+                axios.get('dist/media/transcripts.json').then(({data}) => {
                     // Get all Transcripts, then flatten to single array.
                     const response = [].concat(...data)
                     const arr = []
@@ -54,7 +54,7 @@
                 })
             },
             createAndPlayAudioElement(transcript) {
-                const audio = new Audio(`/dist/media/${this.dirname}/${transcript.EntryHash}.mp3`);
+                const audio = new Audio(`dist/media/${this.dirname}/${transcript.EntryHash}.mp3`);
                 audio.play(); 
             },
             shorten(string, len) {
