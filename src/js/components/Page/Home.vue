@@ -37,7 +37,7 @@
                     <li>MadMikeyB &mdash; <a rel="nofollow noopener" target="_blank" href="https://twitter.com/MadMikeyB">https://twitter.com/MadMikeyB</a> - for this latest incarnation</li>
                 </ul>
                 <strong>Contributing</strong>
-                <p>Please see <a rel="nofollow noopener" target="_blank" href="https://github.com/MadMikeyB/Destiny2-Soundboard/blob/master/CONTRIBUTING.md"></a> or <a rel="nofollow noopener" target="_blank" href="https://github.com/MadMikeyB/Destiny2-Soundboard/discussions/new">start a discussion requesting the character you wish</a></p>
+                <p>Please see <a rel="nofollow noopener" target="_blank" href="https://github.com/MadMikeyB/Destiny2-Soundboard/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> or <a rel="nofollow noopener" target="_blank" href="https://github.com/MadMikeyB/Destiny2-Soundboard/discussions/new">start a discussion requesting the character you wish</a></p>
             </div>
         </div>
     </div>
