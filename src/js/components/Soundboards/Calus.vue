@@ -43,12 +43,12 @@
         },
         methods: {
             fetchLegacyDict() {
-                axios.get('dist/media/legacy_dict.json').then(({data}) => {
+                axios.get('https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/legacy_dict.json').then(({data}) => {
                     this.dict = data
                 });
             },
             fetchTranscripts(name){
-                axios.get(`https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/${this.dirname}/transcripts.json`).then(({data}) => {
+                axios.get(`https://raw.githubusercontent.com/MadMikeyB/Destiny2-Soundboard/master/dist/media/${this.dirname}/transcripts.json`).then(({data}) => {
                     // Get all Transcripts, then flatten to single array.
                     const response = [].concat(...data)
                     const arr = []
