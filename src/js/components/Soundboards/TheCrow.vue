@@ -56,7 +56,7 @@
             },
             createAndPlayAudioElement(transcript) {
                 const audio = new Audio(`https://madmikeyb.github.io/Destiny2-Soundboard/dist/media/${this.dirname}/${transcript.EntryHash}.mp3`);
-                audio.play(); 
+                audio.play();
             },
             shorten(string, len) {
                 return string.substring(0, len + string.substring(len - 1).indexOf(' '));
